@@ -1,0 +1,146 @@
+@media (min-width: @navbarCollapseWidth){ 
+		.navbar .btn-navbar {display:none}
+}
+
+
+@media (max-width: @navbarCollapseWidth){ 
+
+// Hide the captions too
+.mega-caption {
+      display: none !important;
+}
+		/* Always show Sub Menu option */
+		.always-show .mega > .mega-dropdown-menu,
+		.always-show .dropdown-menu {
+		  display: block !important;
+		}
+	#navwrap {
+	
+			position: absolute;
+			top:0;
+			left: 0;
+			background: #222;
+			color:#fff;
+			width: 100%;
+			z-index: 10;
+			
+			
+			h1,h2,h3,h4,h5,h6 {color:#fff}
+			
+			ul.nav {margin:20px 0 !important;
+			
+				li {width:100%;
+					text-indent:10px;
+				
+					&.dropdown {background-position:left 12px !important}
+				
+					a {
+					 border-bottom: 1px solid #111;
+					 border-top:1px solid #333;
+					 border-radius:0;
+					 background: none !important;
+					 text-align:left;
+					 margin:0;
+					 color:#fafafa;
+					 
+					 &:hover {
+					 	color:@linkColorHover
+					 }
+					}
+					
+					
+				
+					ul {
+						box-shadow:0;
+						margin:0 !important;
+						font-size:90%;
+					
+						li {text-indent:30px}
+					}
+					
+
+					.nav-child,
+					.mega-inner,
+					.dropdown-menu {padding:0 !important}
+					
+					
+					/* Reset on drop down menu */
+					.dropdown-menu {
+						.border-radius(0px);
+						margin-top: 0px;
+						-webkit-box-shadow: 0;
+					  	-moz-box-shadow: 0;
+					  	box-shadow: 0;
+					  	overflow: visible;
+						padding: 10px;
+						font-size:90%
+					}
+	
+					li a {padding: 4px 0}
+				}
+				
+				> li:last-child a {border-bottom:0}
+				
+				> li:first-child a {border-top:0}
+
+			}
+			
+			
+				
+			button {
+				margin-top: 8px;
+				margin-bottom: 8px;;
+				background: @primary;
+				color: #fff;
+				text-shadow:none;
+				border:0;
+				margin-left: 4px;
+				font-size:90%;
+				padding:2px 12px;
+				
+				&:hover {background: @secondary}
+			}
+
+		
+	}
+	
+	/* Adds space for the fixed position nav on small screens*/
+	#fullwrap {padding-top:80px !important}
+			
+		
+}
+
+
+@media (min-width: 320px) and (max-width: 759px) {
+	
+	/* Sidebar */
+	.sidebar {
+	
+		ul.nav {
+	
+			float: left;width: 100%;
+	
+			li {float: left;width: 100%}
+
+			li.active.dropdown > a {
+				border-bottom: 1px solid #eee
+			}
+	
+			li.active > a {
+				padding-left: 0 !important;
+			}
+	
+			li.active li.active a {
+				padding: 0 0 0 12px !important;
+			}
+	
+			li a,
+			ul {
+				float: left;width: 100%;margin: 0 !important
+			}
+	
+		}
+
+	}
+
+}

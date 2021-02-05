@@ -1,0 +1,15 @@
+/*Prepare to work*/
+@import "modules/normalize";
+@import "modules/variables";
+@import "modules/mixins";
+@import "modules/fonts";
+@import "modules/animate";
+
+/* Main styles */
+@import "blocks/main";
+
+/*Media queries*/
+@import "meadia/all";
+
+/*Custom style for update or test*/
+@import "mods";

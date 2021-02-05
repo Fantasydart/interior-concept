@@ -1,0 +1,183 @@
+/* all styles */
+@import "global.less";
+
+/*blocks*/
+@import "header.less";
+@import "pages/main-page.less";
+@import "footer.less";
+
+.wrapper{
+    margin: 0 auto;
+    padding: 0;
+    width: 1440px;
+  }
+  .main__banner{
+    height: 800px;
+    width: 100%;
+    position: relative;
+  }
+  .main__banner img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+  }
+  .content__why-us{
+    padding: 90px 0;
+  }
+  .content__title{
+    position: relative;
+    font-size: 2.75em;
+    font-weight: 800;
+  
+  }
+  .content__title::after{
+    position: absolute;
+    content: '';
+    top: -15px;
+    left: 0;
+    height: 4px;
+    width: 50px;
+    background-color: @main_color;
+  }
+  .why-us__container{
+    padding: 20px 0;
+    display: grid;
+    grid-template: 1fr / 30% 70%;
+  }
+  .why-us__achievement .why-us__big{
+    font-size: 5em;
+    font-weight: 800;
+    color: $main_color;
+  }
+  .why-us__achievement .why-us__small{
+    font-size: 2em;
+    color: $main_color;
+    font-weight: 600;
+  }
+  .why-us__services{
+    padding: 60px 0;
+    width: 90%;
+    display: grid;
+    grid-template: repeat(auto-fit, 60px) / 50% 50%;
+    grid-row-gap: 15px;
+    grid-auto-flow: row;
+  }
+  .why-us__services-item{
+    position: relative;
+    font-size: 1.25em;
+    padding-left: 70px;
+    width: 88%;
+    display: flex;
+    align-items: center;
+  }
+  .why-us__services-item::after{
+    position: absolute;
+    content: '';
+    top: 10px;
+    left: 0;
+    width: 40px;
+    height: 40px;
+  }
+  .why-us__services-item.services-item__project::after{
+    background-image: url('/images/svg/temp/icon-project-plan.svg');
+    background-repeat: no-repeat;
+    top: 12px;
+    height: 36px;
+  }
+  .why-us__services-item.services-item__managers::after{
+    background-image: url('/images/svg/temp/icon-truck.svg');
+    background-repeat: no-repeat;
+    top: 12px;
+    height: 36px;
+  }
+  .why-us__services-item.services-item__prices::after{
+    background-image: url('/images/svg/temp/icon-price.svg');
+    background-repeat: no-repeat;
+  }
+  .why-us__services-item.services-item__view::after{
+    background-image: url('/images/svg/temp/icon-view.svg');
+    background-repeat: no-repeat;
+  }
+  .why-us__services-item.services-item__team::after{
+    background-image: url('/images/svg/temp/icon-team.svg');
+    background-repeat: no-repeat;
+  }
+  .why-us__services-item.services-item__future::after{
+    background-image: url('/images/svg/temp/icon-new-tech.svg');
+    background-repeat: no-repeat;
+  }
+  .why-us__services-item.services-item__big-projects::after{
+    background-image: url('/images/svg/temp/icon-all-in-one.svg');
+    background-repeat: no-repeat;
+  }
+  .form__call-us{
+    padding: 50px 0;
+    background-color: $main_color;
+    font-size: 1.15em;
+    color: #fff;
+  }
+  .form__call-us .wrapper{
+    display: grid;
+    grid-template: 1fr / 250px 1fr 1fr;
+    align-items: center;
+  }
+  .form__call-us .wrapper img{
+    height: 100px;
+  }
+  .form__call-us__text{
+    padding-left: 40px;
+  }
+  .form__button{
+    background-color: #5882ab;
+    padding: 15px 20px;
+    width: fit-content;
+    text-decoration: none;
+    color: #fff;
+    .bold();
+    border: 1px solid #fff;
+    border-radius: 6px;
+    transition: .2s;
+  }
+  .form__button:hover{
+    background-color: #446990;
+    transition: .2s;
+  }
+  .services{
+    padding: 60px 0;
+  }
+  .services__container{
+    display: grid;
+    grid-template: 1fr / repeat(auto-fill, minmax(100px, 20%));
+    grid-row-gap: 40px;
+    justify-content: center;
+    padding: 40px 0;
+  }
+  .services__item{
+    display: grid;
+    grid-template: 280px 80px / 1fr;
+    align-items: flex-start;
+    justify-content: center;
+    padding-right: 20px;
+  }
+  .services__img{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  .services__item img{
+    height: 100%;
+  
+  }
+  .services__name{
+    text-transform: uppercase;
+    text-align: center;
+    .bold();
+    font-size: 1.15em;
+    padding-top: 20px;
+  }
+  .content__gallery{
+    padding: 80px 0;
+  }

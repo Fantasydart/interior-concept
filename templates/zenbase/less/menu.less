@@ -1,0 +1,162 @@
+
+/* Nav
+-----------------------------------------------------------------------------*/
+
+/* Some resets and default values */
+#navwrap{
+	float: left;
+	width: 100%;
+	margin-bottom:20px;
+	
+
+/* Background colour on parent items when dropdown open
+	-----------------------------------------------------------------------------*/
+
+	.navbar .nav li.dropdown.open>.dropdown-toggle, .navbar .nav li.dropdown.active>.dropdown-toggle, .navbar .nav li.dropdown.open.active>.dropdown-toggle {
+		background:@navbarLinkBackgroundActive;
+		color:@navbarLinkColorActive;
+		text-shadow:none
+	}
+
+
+	/* Main nav menu
+	-----------------------------------------------------------------------------*/
+	ul.nav{
+			margin-left: 0;
+			font-size:0.8em;
+			font-weight: bold;
+			margin-bottom: 0;
+			margin-top: 0 !important;
+			padding: 0;
+			
+				
+			> li {
+				float:left;
+				list-style-type:none;
+				text-align:center;
+				list-style-type: none;
+				.flatlist;
+				margin-right: 8px;
+			}
+				
+					
+			/* Top level menu items */
+		 	li > a {
+		 		.border-radius(4px);
+		 		border-bottom:0;
+		 		padding: 8px;
+		 		text-transform: uppercase;
+		 		font-size:120%;
+		 		margin-left:0px;
+		 		color:@navbarLinkColor
+		 	}
+		 	
+		 	li > a:hover {
+		 		color:@linkColorHover;
+		 	}
+		 	
+		 	> li.active > a {
+		 		background:@navbarLinkBackgroundActive;
+		 		color:@navbarLinkColorActive;
+		 		text-shadow:none
+		 	}
+				 	
+			
+			/* The marker for drop down items */
+		 	li.dropdown {background:url(../images/navparent.png) no-repeat left center}
+		
+	
+			/* Remove teh default bootstrap styling */
+			li b.caret,
+			li .dropdown-toggle .caret  {
+				display:none
+			}
+			
+	
+	
+			/* Reset on drop down menu */
+			.dropdown-menu {
+				.border-radius(0px);
+				margin-top: 0px;
+				-webkit-box-shadow: 0 15px 15px rgba(0,0,0, 0.3);
+			  	-moz-box-shadow: 0 15px 15px rgba(0, 0, 0, 0.3);
+			  	box-shadow: 0 15px 15px rgba(0, 0, 0, 0.3);
+			  	overflow: visible;
+				padding: 10px;
+				font-size:100%;
+				text-align:left;
+				color: @dropdownColor;
+				
+				h1,h2,h3,h4,h5,h6 {color:@dropdownColor}
+				
+				a {color:@dropdownLinkColor}
+				a:hover {color: @dropdownLinkColorHover}
+				li.active > a {background: @dropdownLinkBackgroundActive; color:@dropdownLinkColorActive}
+
+			
+				/* Small Adjustments on the sub menu items */
+				.custom {font-size:110%}
+				
+				img {}
+			
+				li a {padding:4px 2px}
+				
+				li:last-child a,
+				li:last-child a:hover {border-bottom:0 !important}
+		
+				li.active a,
+				li a:hover {.border-radius(0)}
+			
+			
+				/* Zentools in Mega Menu */
+				.zentools.list li {
+					border: 0 !important;
+					padding: 8px 0;
+				}
+				
+				.zentools.list li:last-child {
+					border-bottom: 0 !important;
+				}
+			}
+		}
+
+}
+
+
+/* Reset top and footer nav
+-----------------------------------------------------------------------------*/
+#topwrap ul.nav,
+#footerwrap ul.nav {
+		li.active > a,
+		li.active a:hover {background: none;color: @secondary;padding: 0;
+	}
+}
+
+
+
+/* Ye Olde Sticky nav
+-----------------------------------------------------------------------------*/
+#navwrap.affix {
+		top: 0;
+		background: @stickynav;
+		width: 100%;
+		z-index: 1000;
+		left: 0;
+		padding-top: 10px;
+		position:fixed;
+		
+		ul {margin-bottom: 0}
+}
+
+
+
+
+/* Nav inside article content - eg tabs etc
+-----------------------------------------------------------------------------*/
+article ul.nav li.active > a, article ul.nav li.active a:hover {
+	.border-radius(0);
+}
+
+article ul.nav li a:hover {
+	border-bottom: 0;
+}
